@@ -1,0 +1,62 @@
+{"intents": [
+    {"tag": "greeting",
+      "patterns": ["Hi","hii", "hiiii", "hiiiii", "How are you", "Is anyone there?", "Hello", "Good day"],
+      "responses": ["Hello, thanks for visiting", "Good to see you", "Hi there, how can I help?"],
+      "context_set": ""
+    },
+    {"tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+    },
+    {"tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful","Thanks for this"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {"tag": "hours",
+      "patterns": ["What hours are you open?", "What are your hours?", "When are you open?","When I can book my Move" ],
+      "responses": ["Any Time", "We work all Time","You can book it Any Time in a day"]
+    },
+    {"tag": "services",
+      "patterns": ["Which services do you have?", "What kinds of services are there?", "about service" ],
+      "responses": ["We have curbside,front door and standard services.", "We have Piaggio, Vespa and Yamaha services."]
+    },
+    {"tag": "payments",
+      "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+      "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
+    },
+    {"tag": "opentoday",
+      "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+      "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
+    },
+    {"tag": "rental",
+      "patterns": ["Can we rent a moped?", "I'd like to rent a moped", "How does this work?" ],
+      "responses": ["Are you looking to rent today or later this week?"],
+      "context_set": "rentalday"
+    },
+    {"tag": "today",
+      "patterns": ["I want to book a move","book move for me","Can i book a move"],
+      "responses": ["ok go to onmove customer home page", "please go on customer page"],
+      "context_filter": "rentalday"
+    },
+    {"tag": "standard",
+      "patterns": ["i want standard service","standard service","can i book on standard services"],
+      "responses": ["ok go to onmove customer home page and at the booking time you have to select the standard service option", "please go on customer page and select a standard service"],
+      "context_filter": "rentalday"
+    },
+    {"tag": "curbside",
+      "patterns": ["i want curbside service","curbside service","can i book on curbside services"],
+      "responses": ["ok go to onmove customer home page and at the booking time you have to select the curbside service option", "please go on customer page and select a curbside service"],
+      "context_filter": "rentalday"
+    },
+    {"tag": "price",
+      "patterns": ["what is the price","please tell me the price of moves","can i know the price"],
+      "responses": ["price for the moves- standard-400,curbside-300,frontdoor-200", "standard-400,frontdoor-200,curbside-100"],
+      "context_filter": "rentalday"
+    },
+    {"tag": "frontdoor",
+      "patterns": ["i want frontdoor service","front door service","can i book on front door services"],
+      "responses": ["ok go to onmove customer home page and at the booking time you have to select the frontdoor service option", "please go on customer page and select a front door service"],
+      "context_filter": "rentalday"
+    }
+  ]
+  }
